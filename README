@@ -7,7 +7,12 @@ Options:
   --importprivkey=KEY  import private key from vanitygen
   --datadir=DATADIR    wallet directory (defaults to bitcoin default)
   --testnet            use testnet subdirectory and address type
+  --cryptoescudo       use cryptoescudo address type 
   --password=PASSWORD  password for the encrypted wallet
+
+How to use with a Cryptoescudo wallet:
+  Copy the wallet file to a temp directory and if the name is other than wallet.dat rename it to wallet.dat 
+  python pywallet.py --datadir [path to temp directory] --cryptoescudo --dumpwallet
 
 Dependencies:
   bsddb (python 2.7.2 msi includes bsddb by default)
