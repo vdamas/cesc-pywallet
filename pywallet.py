@@ -1714,6 +1714,9 @@ def main():
 
     parser.add_option("--testnet", dest="testnet", action="store_true",
         help="use testnet subdirectory and address type")
+    
+    parser.add_option("--cryptoescudo", dest="cryptoescudo", action="store_true",
+        help="use cryptoescudo address type")    
 
     parser.add_option("--password", dest="password",
         help="password for the encrypted wallet")
@@ -1733,6 +1736,9 @@ def main():
     if options.testnet:
         db_dir += "/testnet"
         addrtype = 111
+    
+    if options.cryptoescudo:
+        addrtype = 28
 
     if os.path.exists(db_dir+"/wallets"):
         db_dir += "/wallets"
